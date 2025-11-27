@@ -1,370 +1,316 @@
-<!DOCTYPE html>
+<!-- index.html -->
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Palermo Codeina</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Palermo Codeina 2.0</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- 👁️ QUE MIRÁS GATO TOMATELAAA DEEEEAAAU JODA 👽 MANDA "GLITCH 333" PRIV QUE NECESITAMOS GENTE QUE LABURE
-  CON LA PAGINA, FULL UNDERGROUND TRAP GLITCHBOI VOS SABES BABYYY X_X -->
-  <header class="header">
-    <h1 class="logo">Palermo Codeina</h1>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#home">😵😵😵</a></li>
-        <li><a href="#catalogo">👽👽👽</a></li>
-        <li><a href="#contacto">💊💊💊</a></li>
+  <header class="site-header">
+    <div class="logo">
+      <h1>Palermo Codeina</h1>
+      <div class="tag">Lo desconocido es lo que más brilla</div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#game">Juego</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-<section id="game">
-  <h2>🔥 En desarrollo 🔥</h2>
-  <div id="character-select">
-    <div class="slot" id="slot-left">Jugador 1</div>
+  <main>
+    <section class="hero">
+      <p class="lead">Palermo Codeina 2.0 — la enciclopedia viva del under argentino. Aquí invertimos la jerarquía: "Común" son los nombres más reconocidos; "Legendario / Super Under" son los que todavía están en la penumbra, pero son el verdadero pulso creativo.</p>
+      <div class="manifesto">Del brillo al abismo: celebramos lo crudo, lo auténtico y lo que aún no suena en los charts.</div>
+    </section>
 
-    <canvas id="fightCanvas" width="600" height="300"></canvas>
-    
-    <div class="slot" id="slot-right">Jugador 2</div>
-  
-    
-  </div>
-    <p>Jugador 1 - Arriba (W) Abajo (S)</p>
-      <p>Jugador 2 - Arriba (I) Abajo (K)</p>
-  <!-- Controles táctiles -->
-  <div id="mobile-controls" class="hidden">
-    <div class="controls left-controls">
-      <button data-player="1" data-dir="up">⬆️</button>
-      <button data-player="1" data-dir="down">⬇️</button>
-    </div>
-    <div class="controls right-controls">
-      <button data-player="2" data-dir="up">⬆️</button>
-      <button data-player="2" data-dir="down">⬇️</button>
-    </div>
-  </div>
-</section>
-
-
-<!-- Modal de selección -->
-<div id="character-modal" class="hidden">
-  <h3>Elige tu personaje</h3>
-  <div id="character-grid"></div>
-</div>
-
-<script src="script.js"></script>
-
-
-
-
-  <section id="catalogo" class="catalogo">
-    <h2>Catálogo de Artistas</h2>
-    <div class="grid">
-
-
-
-
-      <div class="item">
-        <img src="2uu.jpg" alt="">
-        <div class="info">
-          <h3>2uu</h3>
-          <a href="https://www.instagram.com/2uuworldwide/" target="_blank">@2uuworldwide</a>
-          <p>"Pepsi"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=igeNYXemNiY" target="_blank">Escuchar</a>
-        </div>
+    <section id="catalogo" class="catalog-wrap">
+      <div class="section-title">
+        <h2>Catálogo de Artistas</h2>
+        <div class="level-note">Explorá por rareza — cuanto más oscuro, más valor.</div>
       </div>
 
-      
-
-
-      <div class="item">
-        <img src="luky.jpg" alt="luky">
-        <div class="info">
-          <h3>Luky</h3>
-          <a href="https://soundcloud.com/lukysbc" target="_blank">@lukysbc</a>
-          <p>"Encontrar"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=45X9QfTkVYk" target="_blank">Ver Video</a>
-        </div>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="comun">Común</button>
+        <button class="filter-btn" data-filter="especial">Especial</button>
+        <button class="filter-btn" data-filter="mitico">Mítico</button>
+        <button class="filter-btn" data-filter="legendario">Legendario</button>
       </div>
 
-      <div class="item">
-        <img src="lthelizard.jpg" alt="lthelizard">
-        <div class="info">
-          <h3>lthelizard</h3>
-          <a href="https://www.instagram.com/lthelizard/" target="_blank">@lthelizard</a>
-          <p>"MIA"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=wNTrNXXdXz8" target="_blank">Ver Video</a>
+      <div id="grids-container">
+
+        <!-- COMÚN -->
+        <div data-level="comun" class="grids level-group">
+          <div class="item comun">
+            <div class="card">
+              <div class="badge comun">🩶 Común</div>
+              <div class="thumb"><img src="cluster.jpg" alt="cluster"></div>
+              <div class="meta">
+                <h3>cluster</h3>
+                <a href="https://www.instagram.com/clustercontilde/" target="_blank">@clustercontilde</a>
+                <p>"ELEGANTE SPORT"</p>
+                <a class="btn" href="https://youtu.be/VFXR_sAfgPQ?si=R2ySokKDZFB8dPIT">Escuchar</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="item">
-        <img src="dexter.jpg" alt="Dexter">
-        <div class="info">
-          <h3>Dexter</h3>
-          <a href="https://www.instagram.com/dexteer.dx/" target="_blank">@dexteer.dx</a>
-          <p>"Tussy (ft. Boppie)"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=DhV7ui_Fs1U" target="_blank">Ver Video</a>
+                <div data-level="comun" class="grids level-group">
+          <div class="item comun">
+            <div class="card">
+              <div class="badge comun">🩶 Común</div>
+              <div class="thumb"><img src="2uu.jpg" alt="2uu"></div>
+              <div class="meta">
+                <h3>2UU!</h3>
+                <a href="https://www.instagram.com/2uuworldwide/" target="_blank">@2uuworldwide</a>
+                <p>"Pepsi"</p>
+                <a class="btn" href="https://youtu.be/igeNYXemNiY?si=y3T1p73VR57hhJnM">Escuchar</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-
-      <div class="item">
-        <img src="laurasad.jpg" alt="Dexter">
-        <div class="info">
-          <h3>Laura Sad</h3>
-          <a href="https://www.instagram.com/laura_sad4life/" target="_blank">@laura_sad4life</a>
-          <p>"i-Laurie"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=bIjHjyEo_lI" target="_blank">Ver Video</a>
+                <div data-level="comun" class="grids level-group">
+          <div class="item comun">
+            <div class="card">
+              <div class="badge comun">🩶 Común</div>
+              <div class="thumb"><img src="blacky.jpg" alt="Blacky"></div>
+              <div class="meta">
+                <h3>Blacky</h3>
+                <a href="https://www.instagram.com/clustercontilde/" target="_blank">@blacky17.svt</a>
+                <p>"GELLY3"</p>
+                <a class="btn" href="https://www.youtube.com/watch?v=ZdhWRt2H944&t=1s">Escuchar</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-
-      <div class="item">
-        <img src="SWAGGERMAN.jpg" alt="Swaggerman">
-        <div class="info">
-          <h3>Swaggerman</h3>
-          <a href="https://www.instagram.com/swaggermannn/" target="_blank">@swaggermannn</a>
-          <p>"Mi propio swag"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=UACve-QRFMo" target="_blank">Escuchar</a>
+                <div data-level="comun" class="grids level-group">
+          <div class="item comun">
+            <div class="card">
+              <div class="badge comun">🩶 Común</div>
+              <div class="thumb"><img src="cero.jpg" alt="cero"></div>
+              <div class="meta">
+                <h3>cero*</h3>
+                <a href="https://www.instagram.com/ceroasterisco/" target="_blank">@ceroasterisco</a>
+                <p>"1234"</p>
+                <a class="btn" href="https://youtu.be/VMM4IpD8LhA?si=xgRdXLLaZ_NpbEhY">Escuchar</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      
-      <div class="item">
-        <img src="is4bbk.jpg" alt="is4bbk">
-        <div class="info">
-          <h3>is4bbk</h3>
-          <a href="https://www.instagram.com/isaias.bbk/" target="_blank">@isaias.bbk</a>
-          <p>"Forma de hacerlo"</p>
-          <a class="btn" href="https://youtu.be/LLM7i_ixkPQ?si=jkSnc7LZ_k-SA2wf" target="_blank">Escuchar</a>
+                <div data-level="comun" class="grids level-group">
+          <div class="item comun">
+            <div class="card">
+              <div class="badge comun">🩶 Común</div>
+              <div class="thumb"><img src="clubhats.jpg" alt="clubhats"></div>
+              <div class="meta">
+                <h3>clubhats</h3>
+                <a href="https://www.instagram.com/clubhats/" target="_blank">@clubhats</a>
+                <p>"LIFESTYLE"</p>
+                <a class="btn" href="https://youtu.be/d0saF7UmSvc?si=vYqM1R0qPNAGik06">Escuchar</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-
-
-      <div class="item">
-        <img src="kray.jpg" alt="kray">
-        <div class="info">
-          <h3>Kray</h3>
-          <a href="https://www.instagram.com/kraysbc/" target="_blank">@kraysbc</a>
-          <p>"Te veo en mis dreams"</p>
-          <a class="btn" href="https://on.soundcloud.com/jXLRPw65sN3bRvAKn6" target="_blank">Escuchar</a>
+                <div data-level="comun" class="grids level-group">
+          <div class="item comun">
+            <div class="card">
+              <div class="badge comun">🩶 Común</div>
+              <div class="thumb"><img src="dahn.jpg" alt="dahn"></div>
+              <div class="meta">
+                <h3>dahn</h3>
+                <a href="https://www.instagram.com/clustercontilde/" target="_blank">@xdahnx</a>
+                <p>"keyhole"</p>
+                <a class="btn" href="https://www.youtube.com/watch?v=I6QOJEqdXTM">Escuchar</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-
-      <div class="item">
-        <img src="eqys.jpg" alt="EQYS X_X">
-        <div class="info">
-          <h3>Eqys</h3>
-          <a href="https://www.instagram.com/boumper_x/" target="_blank">@boumper_x</a>
-          <p>"Who am I?"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=CNdEq4nJmwI" target="_blank">Escuchar</a>
+                <div data-level="legendario" class="grids level-group">
+          <div class="item legendario">
+            <div class="card">
+              <div class="badge legendario">🖤 Legendario</div>
+              <div class="thumb"><img src="dexter.jpg" alt="dexteer dx"></div>
+              <div class="meta">
+                <h3>Dexteer dx</h3>
+                <a href="https://www.instagram.com/dexteer.dx/" target="_blank">@dexteer.dx</a>
+                <p>"RESPETO"</p>
+                <a class="btn" href="https://youtu.be/7v1xD3ml3to?si=BwODk9L_ICqR40BK">Escuchar</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      
 
-      <div class="item">
-        <img src="kiddix.jpg" alt="Jugo!">
-        <div class="info">
-          <h3>kiddix</h3>
-          <a href="https://www.instagram.com/1kiddix/" target="_blank">@1kiddix</a>
-          <p>"#EMPYRE"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=ZjPVT4FYPaE" target="_blank">Full mixtape</a>
+        <!-- ESPECIAL -->
+        <div data-level="especial" class="grids level-group">
+          <div class="item especial">
+            <div class="card">
+              <div class="badge especial">🖤 Legendario</div>
+              <div class="thumb"><img src="luky.jpg" alt="Luky"></div>
+              <div class="meta">
+                <h3>Luky</h3>
+                <a href="https://soundcloud.com/lukysbc" target="_blank">@lukysbc</a>
+                <p>"Encontrar"</p>
+                <a class="btn" href="https://www.youtube.com/watch?v=uCumByZG3YM">Ver video</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-
-
-      <div class="item">
-        <img src="krel.jpg" alt="Krel">
-        <div class="info">
-          <h3>Krel</h3>
-          <a href="https://www.instagram.com/krel.truth/" target="_blank">@krel.truth</a>
-          <p>"De tiger a goat"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=nRNUOCg-WEg" target="_blank">Full Album</a>
+        <!-- MÍTICO -->
+        <div data-level="mitico" class="grids level-group">
+          <div class="item mitico">
+            <div class="card">
+              <div class="badge mitico">🔥 Mítico</div>
+              <div class="thumb"><img src="krel.jpg" alt="Krel"></div>
+              <div class="meta">
+                <h3>Krel</h3>
+                <a href="https://www.instagram.com/krel.truth/" target="_blank">@krel.truth</a>
+                <p>"De tiger a goat"</p>
+                <a class="btn" href="#">Full Album</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      
-      <div class="item">
-        <img src="jugo.jpg" alt="Jugo!">
-        <div class="info">
-          <h3>Jugo!</h3>
-          <a href="https://www.instagram.com/juicynise7/" target="_blank">@juicynise7</a>
-          <p>"Un solo cable"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=tetTy3jy2cQ" target="_blank">Ver Video</a>
+                <div data-level="mitico" class="grids level-group">
+          <div class="item mitico">
+            <div class="card">
+              <div class="badge mitico">🔥 Mítico</div>
+              <div class="thumb"><img src="dolyflackko.jpg" alt="dolyflackko"></div>
+              <div class="meta">
+                <h3>Krel</h3>
+                <a href="https://www.instagram.com/dolyflackko/" target="_blank">@dolyflackko</a>
+                <p>"De tiger a goat"</p>
+                <a class="btn" href="https://www.youtube.com/watch?v=0roxjExb7iU">Full Album</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-
-      <div class="item">
-        <img src="odah.jpg" alt="Odah">
-        <div class="info">
-          <h3>Odah</h3>
-          <a href="https://www.instagram.com/odah___/" target="_blank">@odah___</a>
-          <p>"Estamos Locos"</p>
-          <a class="btn" href="https://youtu.be/VNVCEgI6cxE?si=OA90y-06Z66HjWOS" target="_blank">Escuchar</a>
+                <div data-level="mitico" class="grids level-group">
+          <div class="item mitico">
+            <div class="card">
+              <div class="badge mitico">🔥 Mítico</div>
+              <div class="thumb"><img src="krel.jpg" alt="Krel"></div>
+              <div class="meta">
+                <h3>Krel</h3>
+                <a href="https://www.instagram.com/krel.truth/" target="_blank">@krel.truth</a>
+                <p>"De tiger a goat"</p>
+                <a class="btn" href="#">Full Album</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-
-      <div class="item">
-        <img src="eluney.jpg" alt="eluney">
-        <div class="info">
-          <h3>Eluney Benedetti</h3>
-          <a href="https://www.instagram.com/eluneybenedetti/" target="_blank">@eluneybenedetti</a>
-          <p>"Pimpinela love"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=1UhbU2OFAe8" target="_blank">spotify</a>
+                <div data-level="mitico" class="grids level-group">
+          <div class="item mitico">
+            <div class="card">
+              <div class="badge mitico">🔥 Mítico</div>
+              <div class="thumb"><img src="krel.jpg" alt="Krel"></div>
+              <div class="meta">
+                <h3>Krel</h3>
+                <a href="https://www.instagram.com/krel.truth/" target="_blank">@krel.truth</a>
+                <p>"De tiger a goat"</p>
+                <a class="btn" href="#">Full Album</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-
-
-            <div class="item">
-        <img src="cluster.jpg" alt="cluster">
-        <div class="info">
-          <h3>cluster</h3>
-          <a href="https://www.instagram.com/clustercontilde/" target="_blank">@clustercontilde</a>
-          <p>"Top 1 charts"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=LFi4hVeV3Nw" target="_blank">Escuchar</a>
+                <div data-level="mitico" class="grids level-group">
+          <div class="item mitico">
+            <div class="card">
+              <div class="badge mitico">🔥 Mítico</div>
+              <div class="thumb"><img src="krel.jpg" alt="Krel"></div>
+              <div class="meta">
+                <h3>Krel</h3>
+                <a href="https://www.instagram.com/krel.truth/" target="_blank">@krel.truth</a>
+                <p>"De tiger a goat"</p>
+                <a class="btn" href="#">Full Album</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-
-            <div class="item">
-        <img src="kmaleon.jpg" alt="kmaleon">
-        <div class="info">
-          <h3>kmaleon</h3>
-          <a href="https://www.instagram.com/kmaleon420/" target="_blank">@kmaleon420</a>
-          <p>"TE VA A SONAR SIEMPRE RMX"</p>
-          <a class="btn" href="https://on.soundcloud.com/EvFuMixiu2hASZNpPw" target="_blank">Escuchar</a>
+                <div data-level="mitico" class="grids level-group">
+          <div class="item mitico">
+            <div class="card">
+              <div class="badge mitico">🔥 Mítico</div>
+              <div class="thumb"><img src="krel.jpg" alt="Krel"></div>
+              <div class="meta">
+                <h3>Krel</h3>
+                <a href="https://www.instagram.com/krel.truth/" target="_blank">@krel.truth</a>
+                <p>"De tiger a goat"</p>
+                <a class="btn" href="#">Full Album</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-
-
-  <div class="item">
-        <img src="marcos ytz.jpg" alt="marcos ytz">
-        <div class="info">
-          <h3>Marcos ytz</h3>
-          <a href="https://www.instagram.com/marcos.ytz/" target="_blank">@marcos.ytz</a>
-          <p>"Dali"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=rTFXQDWlpYE" target="_blank">Ver Video</a>
+                <div data-level="mitico" class="grids level-group">
+          <div class="item mitico">
+            <div class="card">
+              <div class="badge mitico">🔥 Mítico</div>
+              <div class="thumb"><img src="krel.jpg" alt="Krel"></div>
+              <div class="meta">
+                <h3>Krel</h3>
+                <a href="https://www.instagram.com/krel.truth/" target="_blank">@krel.truth</a>
+                <p>"De tiger a goat"</p>
+                <a class="btn" href="#">Full Album</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-
-
-      <div class="item">
-        <img src="dahn.jpg" alt="xDahnx">
-        <div class="info">
-          <h3>xDahnx</h3>
-          <a href="https://www.instagram.com/xdahnx/" target="_blank">@xdahnx</a>
-          <p>"Key Hole"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=I6QOJEqdXTM" target="_blank">Ver Video</a>
+        <!-- LEGENDARIO -->
+        <div data-level="legendario" class="grids level-group">
+          <div class="item legendario">
+            <div class="card">
+              <div class="badge legendario">🖤 Legendario</div>
+              <div class="thumb"><img src="is4bbk.jpg" alt="is4bbk"></div>
+              <div class="meta">
+                <h3>is4bbk</h3>
+                <a href="https://www.instagram.com/isaias.bbk/" target="_blank">@isaias.bbk</a>
+                <p>"Forma de hacerlo"</p>
+                <a class="btn" href="#">Escuchar</a>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
+    </section>
 
-     
-     
-      <div class="item">
-        <img src="juanssin.jpg" alt="juanssin">
-        <div class="info">
-          <h3>Juanssin</h3>
-          <a href="https://www.instagram.com/juanssin/" target="_blank">@juanssin</a>
-          <p>"TROPICANA"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=jf0xULdinY4" target="_blank">Ver Video</a>
-        </div>
+    <section id="game">
+      <h2>Mini juego — Pelea de personajes</h2>
+      <div id="character-select">
+        <div class="slot" id="slot-left">Jugador 1</div>
+        <canvas id="fightCanvas" width="640" height="320"></canvas>
+        <div class="slot" id="slot-right">Jugador 2</div>
       </div>
+      <p class="game-controls">Jugador 1: W/S — Jugador 2: I/K</p>
+    </section>
 
+    <section id="contacto" class="contacto">
+      <h2>Contacto</h2>
+      <p>¿Querés aparecer en el catálogo? Mandanos mail a <strong>dlkunderground@gmail.com</strong> o DM a <strong>@palermo.codeina</strong></p>
+    </section>
+  </main>
 
-
-      <div class="item">
-        <img src="blacky.jpg" alt="Blacky">
-        <div class="info">
-          <h3>Blacky</h3>
-          <a href="https://www.instagram.com/blacky17.svt/" target="_blank">@blacky17.svt</a>
-          <p>"GELLY3"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=ZdhWRt2H944&t=1s" target="_blank">Ver Video</a>
-        </div>
-      </div>
-
-
-      <div class="item">
-        <img src="dolyflackko.jpg" alt="DolyFlackko">
-        <div class="info">
-          <h3>DolyFlackko</h3>
-          <a href="https://www.instagram.com/dolyflackko/" target="_blank">@dolyflackko</a>
-          <p>"Último momento"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=uCF-6mE8ji0" target="_blank">Escuchar</a>
-        </div>
-      </div>
-
-
-      
-      <div class="item">
-        <img src="cero.jpg" alt="Cero*">
-        <div class="info">
-          <h3>Cero*</h3>
-          <a href="https://www.instagram.com/ceroasterisco/" target="_blank">@ceroasterisco</a>
-          <p>"Mr. Wow"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=XaZzIbbXAA0" target="_blank">Ver Video</a>
-        </div>
-      </div>
-
-      
-      <div class="item">
-        <img src="erre.jpg" alt="ERRE">
-        <div class="info">
-          <h3>Erre</h3>
-          <a href="https://www.instagram.com/erre_.777/" target="_blank">@erre_.777</a>
-          <p>"ZOUKREIZE"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=OOwjFQ4Zq5A" target="_blank">Escuchar</a>
-        </div>
-      </div>
-
-
-
-      
-      <div class="item">
-        <img src="enzocerobulto.jpg" alt="enzocerobulto">
-        <div class="info">
-          <h3>Enzocerobulto</h3>
-          <a href="https://www.instagram.com/enzocerobulto/" target="_blank">@enzocerobulto</a>
-          <p>"Blackalbum"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=hqL-W1ENFSg" target="_blank">Full Album</a>
-        </div>
-      </div>
-
-
-    <div class="item">
-        <img src="clubhats.jpg" alt="clubhats">
-        <div class="info">
-          <h3>Clubhats</h3>
-          <a href="https://www.instagram.com/clubhats/" target="_blank">@clubhats</a>
-          <p>"Toda la musica tape"</p>
-          <a class="btn" href="https://www.youtube.com/watch?v=WQ7_Sb1DdBc&list=PLxWDzdXXZWrfTBgHgaHHqz3ll5rEF-bNz" target="_blank">Full Album</a>
-        </div>
-      </div>
-
-
-    </div>
-  </section>
-
-  <!-- CONTACTO -->
-  <section id="contacto" class="contacto">
-    <h2>Contacto</h2>
-    <p>¿Querés aparecer en el catálogo? Escribinos:</p>
-    <p><strong>dlkunderground@gmail.com</strong></p>
-    <p><strong>@palermo.codeina</strong></p>
-  </section>
-
-  <!-- FOOTER -->
   <footer>
-    <p>Palermo Codeina © 2025 - Difusión Under</p>
+    <p>Palermo Codeina © 2025 — Difusión Under — Diseño: Glitch / Neon</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
